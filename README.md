@@ -10,6 +10,8 @@ NOTE: APK is atttached to the repo named as "app-release.apk"
 
 https://drive.google.com/drive/folders/1GWU58h54k5AfJZE0zN_WPPHmHraCdogM?usp=share_link
 
+![Alt text](https://raw.githubusercontent.com/Bhaveshupadhyay/gym/refs/heads/main/fam.jpg "Fam Ios screenshots")
+
 ## Library Used
 
 - Flutter Bloc
