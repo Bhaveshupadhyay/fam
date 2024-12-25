@@ -33,6 +33,7 @@ class Home extends StatelessWidget {
             FamxPayPage famxPayPage= state.data[0];
 
             return SingleChildScrollView(
+              physics: const AlwaysScrollableScrollPhysics(),
               child: Container(
                 decoration: const BoxDecoration(
                   color: Color(0xFFF7F6F3),

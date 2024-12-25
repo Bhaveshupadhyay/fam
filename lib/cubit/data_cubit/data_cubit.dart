@@ -16,7 +16,6 @@ class DataCubit extends Cubit<DataState>{
     }
     catch(e){
       if(isClosed) return;
-      print(e.toString());
       emit(DataFailed(errorMsg: e.toString()));
     }
   }
