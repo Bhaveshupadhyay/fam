@@ -34,6 +34,7 @@ class Home extends StatelessWidget {
 
             return SingleChildScrollView(
               physics: const AlwaysScrollableScrollPhysics(),
+
               child: Container(
                 decoration: const BoxDecoration(
                   color: Color(0xFFF7F6F3),
