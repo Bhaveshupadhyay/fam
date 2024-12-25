@@ -1,6 +1,5 @@
 import 'package:fampay/cubit/card_cubit/card_cubit.dart';
 import 'package:fampay/cubit/data_cubit/data_cubit.dart';
-import 'package:fampay/cubit/slider_cubit/slider_cubit.dart';
 import 'package:fampay/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -34,7 +33,6 @@ class MyHomePage extends StatelessWidget {
       providers: [
         BlocProvider(create: (_)=>DataCubit()..loadData()),
         BlocProvider(create: (_)=>SaveCardCubit()..loadSavedCards()),
-        BlocProvider(create: (_)=>SliderCubit()),
       ],
       child: Scaffold(
         appBar: AppBar(
