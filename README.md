@@ -10,7 +10,8 @@ NOTE: APK is atttached to the repo named as "app-release.apk"
 
 https://drive.google.com/drive/folders/1GWU58h54k5AfJZE0zN_WPPHmHraCdogM?usp=share_link
 
-![Alt text](https://raw.githubusercontent.com/Bhaveshupadhyay/gym/refs/heads/main/fam.jpg "Fam Ios screenshots")
+![fam_ss](https://github.com/user-attachments/assets/016a05d5-728b-4b2f-8957-79a67b97f5db)
+
 
 https://github.com/user-attachments/assets/4088e39f-27b7-4b31-a00a-5b17d49e7d9f
 
