@@ -12,7 +12,7 @@ https://drive.google.com/drive/folders/1GWU58h54k5AfJZE0zN_WPPHmHraCdogM?usp=sha
 
 ![Alt text](https://raw.githubusercontent.com/Bhaveshupadhyay/gym/refs/heads/main/fam.jpg "Fam Ios screenshots")
 
-https://github.com/user-attachments/assets/613d93f0-7dab-4c5c-8bae-feed611e3bf5
+https://github.com/user-attachments/assets/4088e39f-27b7-4b31-a00a-5b17d49e7d9f
 
 ## Library Used
 
