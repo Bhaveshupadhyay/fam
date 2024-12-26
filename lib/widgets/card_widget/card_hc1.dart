@@ -22,7 +22,7 @@ class CardHC1 extends StatelessWidget {
         width: width,
         padding: const EdgeInsets.symmetric(vertical: 15,horizontal: 15),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Convert.getColorFromHex(card.bgColor),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
@@ -80,7 +80,7 @@ class CardHC1 extends StatelessWidget {
                         ),
                         children: [
                           TextSpan(
-                            text: '${card.formattedDescription?.text.replaceAll('{}', '')}',
+                            text: card.formattedDescription?.text.replaceAll('{}', '')??'',
                             style: Theme.of(context).textTheme.bodySmall?.
                             copyWith(
                                 color: Colors.white,
@@ -89,7 +89,7 @@ class CardHC1 extends StatelessWidget {
                           ),
                           if((card.formattedDescription?.entities.length??0)>=2)
                             TextSpan(
-                              text: '${card.formattedDescription?.entities[1].text} ',
+                              text: '${card.formattedDescription?.entities[1].text??''} ',
                               style: Theme.of(context).textTheme.bodySmall?.
                               copyWith(
                                   color: Convert.getColorFromHex(card.formattedDescription?.entities[1].color),

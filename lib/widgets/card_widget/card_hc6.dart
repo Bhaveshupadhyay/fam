@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../config/convert.dart';
 import '../../config/launch_url.dart';
 import '../../models/card.dart';
 
@@ -20,7 +21,7 @@ class CardHC6 extends StatelessWidget {
         width: width,
         padding: const EdgeInsets.symmetric(vertical: 15,horizontal: 15),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Convert.getColorFromHex(card.bgColor),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
