@@ -12,8 +12,7 @@ https://drive.google.com/drive/folders/1GWU58h54k5AfJZE0zN_WPPHmHraCdogM?usp=sha
 
 ![fam_ss](https://github.com/user-attachments/assets/016a05d5-728b-4b2f-8957-79a67b97f5db)
 
-
-https://github.com/user-attachments/assets/4088e39f-27b7-4b31-a00a-5b17d49e7d9f
+https://github.com/user-attachments/assets/5d1b3aef-b1be-49f3-928c-22baf616d1c2
 
 ## Library Used
 
