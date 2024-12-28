@@ -10,14 +10,11 @@ NOTE: APK is atttached to the repo named as "app-release.apk"
 
 https://drive.google.com/drive/folders/1GWU58h54k5AfJZE0zN_WPPHmHraCdogM?usp=share_link
 
-![fam_ss](https://github.com/user-attachments/assets/016a05d5-728b-4b2f-8957-79a67b97f5db)
+![fam_app](https://github.com/user-attachments/assets/8fe73435-d98c-4af8-9788-b5578bd7df55)
 
 https://github.com/user-attachments/assets/5d1b3aef-b1be-49f3-928c-22baf616d1c2
 
 https://github.com/user-attachments/assets/65978ae2-689d-4c98-8e34-612ce88fe1fa
-
-![fam_app](https://github.com/user-attachments/assets/8fe73435-d98c-4af8-9788-b5578bd7df55)
-
 
 ## Library Used
 
