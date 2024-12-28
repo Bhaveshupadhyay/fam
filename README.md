@@ -40,6 +40,10 @@ used for launching URLs
  
 - Storing Card Details: I stored card details using a card ID as the key and the associated card details as the value. The card ID is used to access a specific card's data from the stored map.
 
+## Screen utils
+
+used to make the app responsive on all devices. It adjusts the layout to fit different screen sizes and resolutions, ensuring a consistent user experience across smartphones, tablets, and other devices
+
 ## Extra
 
  I used Aspect Ratio and Card ID, which were defined in the API but not initially part of the app's predefined schema
