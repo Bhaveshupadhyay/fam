@@ -5,6 +5,7 @@ import 'package:fampay/cubit/slider_cubit/slider_cubit.dart';
 import 'package:fampay/models/cta.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../models/card.dart';
 
@@ -30,7 +31,7 @@ class CardHC3 extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(12.r),
                   ),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -42,7 +43,7 @@ class CardHC3 extends StatelessWidget {
                             onTap: ()=>
                                 context.read<SliderCubit>().changeSliderState(),
                             child: Padding(
-                              padding:  const EdgeInsets.symmetric(horizontal: 20),
+                              padding:  EdgeInsets.symmetric(horizontal: 20.w),
                               child: Center(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -72,7 +73,7 @@ class CardHC3 extends StatelessWidget {
                           child: Container(
                             decoration: BoxDecoration(
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(12),
+                              borderRadius: BorderRadius.circular(12.r),
                             ),
                             child: InkWell(
                               onTap: (){
@@ -81,12 +82,12 @@ class CardHC3 extends StatelessWidget {
                                 }
                               },
                               child: Container(
-                                padding:  EdgeInsets.symmetric(vertical: MediaQuery.sizeOf(context).height * 0.03,
-                                    horizontal: MediaQuery.sizeOf(context).width * 0.09
+                                padding:  EdgeInsets.symmetric(vertical: 0.03.sh,
+                                    horizontal: 0.09.sw
                                 ),
                                 decoration: BoxDecoration(
                                     color: Convert.getColorFromHex(card.bgColor),
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(12.r),
                                     image: DecorationImage(
                                         image: NetworkImage(card.bgImage?.imageUrl??''),
                                         fit: BoxFit.fill
@@ -99,7 +100,7 @@ class CardHC3 extends StatelessWidget {
                                     if(card.icon!=null)
                                       card.icon?.imageType == 'asset'?
                                       SizedBox(
-                                        width: 50,
+                                        width: 50.w,
                                         child: AspectRatio(
                                           aspectRatio: card.icon?.aspectRatio?.toDouble()?? 16/9,
                                           child: Image.asset(
@@ -109,14 +110,14 @@ class CardHC3 extends StatelessWidget {
                                       )
                                           :
                                       SizedBox(
-                                        width: 40,
+                                        width: 40.w,
                                         child: AspectRatio(
                                           aspectRatio: card.icon?.aspectRatio?.toDouble()?? 16/9,
                                           child: Image.network(card.icon?.imageUrl??'',),
                                         ),
                                       ),
 
-                                    const SizedBox(height: 5,),
+                                    SizedBox(height: 5.h,),
 
 
                                     RichText(
@@ -126,7 +127,7 @@ class CardHC3 extends StatelessWidget {
                                             style: Theme.of(context).textTheme.titleSmall?.
                                             copyWith(
                                                 color: Convert.getColorFromHex(card.formattedTitle?.entities[0].color),
-                                                fontSize: 35
+                                                fontSize: 40.sp
                                             ),
                                             children: [
                                               TextSpan(
@@ -134,7 +135,7 @@ class CardHC3 extends StatelessWidget {
                                                 style: Theme.of(context).textTheme.titleSmall?.
                                                 copyWith(
                                                     color: Colors.white,
-                                                    fontSize: 35
+                                                    fontSize: 40.sp
                                                 ),
                                               ),
                                               if((card.formattedTitle?.entities.length??0)>=2)
@@ -143,27 +144,27 @@ class CardHC3 extends StatelessWidget {
                                                   style: Theme.of(context).textTheme.bodySmall?.
                                                   copyWith(
                                                       color: Convert.getColorFromHex(card.formattedTitle?.entities[1].color),
-                                                      fontSize: 15
+                                                      fontSize: 16.sp
                                                   ),
                                                 ),
                                             ]
                                         )
                                     ),
-                                    const SizedBox(height: 10,),
+                                    SizedBox(height: 10.h,),
 
                                     for(Cta cta in card.cta!)
                                       Container(
-                                        padding: const EdgeInsets.symmetric(vertical: 13,horizontal: 40),
+                                        padding: EdgeInsets.symmetric(vertical: 13.h,horizontal: 40.w),
                                         decoration: BoxDecoration(
                                             color: Convert.getColorFromHex(cta.bgColor),
-                                            borderRadius: BorderRadius.circular(6)
+                                            borderRadius: BorderRadius.circular(6.r)
                                         ),
                                         child: Text(
                                           cta.text,
                                           style: Theme.of(context).textTheme.bodySmall?.
                                           copyWith(
                                             color: Convert.getColorFromHex(cta.textColor),
-                                            fontSize: 14,
+                                            fontSize: 14.sp,
                                           ),
                                         ),
                                       )
@@ -187,18 +188,18 @@ class CardHC3 extends StatelessWidget {
 
   Widget _btn({required String text, required String assetPath}){
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding: EdgeInsets.all(10.r),
       decoration: BoxDecoration(
           color: const Color(0xffF7F6F3),
-          borderRadius: BorderRadius.circular(12)
+          borderRadius: BorderRadius.circular(12.r)
       ),
       child: Column(
         children: [
-          Image.asset(assetPath),
+          Image.asset(assetPath,),
           Text(text,
-            style: const TextStyle(
+            style: TextStyle(
                 color: Colors.black,
-                fontSize: 11
+                fontSize: 11.sp
             ),
           ),
 

@@ -1,5 +1,6 @@
 import 'package:fampay/models/card.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../config/convert.dart';
 import '../../config/launch_url.dart';
@@ -22,10 +23,10 @@ class CardHC5 extends StatelessWidget {
         child: AspectRatio(
           aspectRatio: card.bgImage?.aspectRatio?.toDouble()?? 16/9,
           child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 20),
+            padding: EdgeInsets.symmetric(vertical: 5.h,horizontal: 20.w),
             decoration: BoxDecoration(
                 color: Convert.getColorFromHex(card.bgColor),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(12.r),
                 image: DecorationImage(
                     image: NetworkImage(card.bgImage?.imageUrl??''),
                     fit: BoxFit.fill
@@ -40,8 +41,8 @@ class CardHC5 extends StatelessWidget {
                       aspectRatio: card.icon?.aspectRatio?.toDouble()?? 16/9,
                       child: Image.asset(
                         'assets/images/${card.icon?.imageUrl??'error.png'}',
-                        height: 80,
-                        width: 90,
+                        height: 80.h,
+                        width: 90.w,
                       ),
                     ),
                   )
@@ -52,12 +53,12 @@ class CardHC5 extends StatelessWidget {
                       child: Image.network(card.icon?.imageUrl??'',),
                     ),
                   ),
-                const SizedBox(width: 15,),
+                SizedBox(width: 15.w,),
 
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 5,),
+                    SizedBox(height: 5.h,),
                     RichText(
                         text: TextSpan(
                             text: '${(card.formattedTitle?.entities.length??0)>=1 ?
@@ -65,7 +66,7 @@ class CardHC5 extends StatelessWidget {
                             style: Theme.of(context).textTheme.titleSmall?.
                             copyWith(
                                 color: Convert.getColorFromHex(card.formattedTitle?.entities[0].color),
-                                fontSize: 35
+                                fontSize: 35.sp
                             ),
                             children: [
                               TextSpan(
@@ -73,7 +74,7 @@ class CardHC5 extends StatelessWidget {
                                 style: Theme.of(context).textTheme.titleSmall?.
                                 copyWith(
                                     color: Colors.white,
-                                    fontSize: 35
+                                    fontSize: 35.sp
                                 ),
                               ),
                               if((card.formattedTitle?.entities.length??0)>=2)
@@ -82,13 +83,13 @@ class CardHC5 extends StatelessWidget {
                                 style: Theme.of(context).textTheme.bodySmall?.
                                 copyWith(
                                     color: Convert.getColorFromHex(card.formattedTitle?.entities[1].color),
-                                    fontSize: 15
+                                    fontSize: 15.sp
                                 ),
                               ),
                             ]
                         )
                     ),
-                    const SizedBox(height: 5,),
+                    SizedBox(height: 5.h,),
                   ],
                 )
               ],

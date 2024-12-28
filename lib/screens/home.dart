@@ -10,6 +10,7 @@ import 'package:fampay/widgets/card_widget/card_hc5.dart';
 import 'package:fampay/widgets/card_widget/card_hc9.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../models/famx_page.dart';
 import '../widgets/card_widget/card_hc6.dart';
@@ -36,11 +37,11 @@ class Home extends StatelessWidget {
               physics: const AlwaysScrollableScrollPhysics(),
 
               child: Container(
-                decoration: const BoxDecoration(
-                  color: Color(0xFFF7F6F3),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFF7F6F3),
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(12),
-                      topRight: Radius.circular(12)
+                      topLeft: Radius.circular(12.r),
+                      topRight: Radius.circular(12.r)
                   ),
                 ),
                 child: Column(
@@ -58,7 +59,7 @@ class Home extends StatelessWidget {
                             _hc1(context, cardGroup),
 
 
-                    const SizedBox(height: 30,),
+                    SizedBox(height: 30.h,),
                   ],
                 ),
               ),
@@ -70,7 +71,7 @@ class Home extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleSmall?.
                 copyWith(
                   color: Colors.black,
-                  fontSize: 20
+                  fontSize: 20.sp
                 ),
               ),
             );
@@ -92,7 +93,7 @@ class Home extends StatelessWidget {
           isAppReloaded= isAppReloaded==null? true : false;
           return cardGroup.isScrollable?
           Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
+              padding: EdgeInsets.symmetric(vertical: 20.h),
               child : SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -107,8 +108,8 @@ class Home extends StatelessWidget {
                         }
                       }
                       return Padding(
-                        padding: EdgeInsets.only(left: index==0? 20 : 0,right: 20,),
-                        child: CardHC3(card: cardGroup.cards[index],width: MediaQuery.sizeOf(context).width * 0.8,),
+                        padding: EdgeInsets.only(left: index==0? 20.w : 0,right: 20.w,),
+                        child: CardHC3(card: cardGroup.cards[index],width: 0.8.sw,),
                       );
                     })
                   ],
@@ -117,7 +118,7 @@ class Home extends StatelessWidget {
           )
               :
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+            padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
             child: state.data.containsKey(cardGroup.cards[0].id.toString()) &&
                 (state.data[cardGroup.cards[0].id.toString()]['isDismiss'] ||
                 (state.data[cardGroup.cards[0].id.toString()]['isRemind'] && isAppReloaded==false))?
@@ -136,15 +137,15 @@ class Home extends StatelessWidget {
 
     return cardGroup.isScrollable?
     Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding: EdgeInsets.symmetric(vertical: 20.h),
         child : SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
               ...List.generate(cardGroup.cards.length, (index){
                 return Padding(
-                  padding: EdgeInsets.only(left: index==0? 20 : 0,right: 20,),
-                  child: CardHC6(card: cardGroup.cards[index],width: MediaQuery.sizeOf(context).width * 0.8,),
+                  padding: EdgeInsets.only(left: index==0? 20.w : 0,right: 20.w,),
+                  child: CardHC6(card: cardGroup.cards[index],width: 0.8.sw,),
                 );
               })
             ],
@@ -153,7 +154,7 @@ class Home extends StatelessWidget {
     )
         :
     Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+      padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
       child: CardHC6(card: cardGroup.cards[0]),
     );
   }
@@ -163,15 +164,15 @@ class Home extends StatelessWidget {
 
     return cardGroup.isScrollable?
     Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding: EdgeInsets.symmetric(vertical: 20.h),
         child : SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
               ...List.generate(cardGroup.cards.length, (index){
                 return Padding(
-                  padding: EdgeInsets.only(left: index==0? 20 : 0,right: 20,),
-                  child: CardHC5(card: cardGroup.cards[index],width: MediaQuery.sizeOf(context).width * 0.8,),
+                  padding: EdgeInsets.only(left: index==0? 20.w : 0,right: 20.w,),
+                  child: CardHC5(card: cardGroup.cards[index],width: 0.8.sw,),
                 );
               })
             ],
@@ -180,23 +181,22 @@ class Home extends StatelessWidget {
     )
         :
     Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+      padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
       child: CardHC5(card: cardGroup.cards[0]),
     );
   }
 
   Widget _hc9(BuildContext context, CardGroup cardGroup){
-
     return Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding: EdgeInsets.symmetric(vertical: 20.h),
         child : SizedBox(
-          height: cardGroup.height?.toDouble()??300,
+          height: (cardGroup.height?.toDouble()??300).h,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
               itemBuilder: (context,index){
                 return Padding(
-                  padding: EdgeInsets.only(left: index==0? 20 : 0,right: 20,),
-                  child: CardHC9(card: cardGroup.cards[index],width: MediaQuery.sizeOf(context).width * 0.8,),
+                  padding: EdgeInsets.only(left: index==0? 20.w : 0,right: 20.w,),
+                  child: CardHC9(card: cardGroup.cards[index],width: 0.8.sw,),
                 );
               },
             itemCount: cardGroup.cards.length,
@@ -210,15 +210,15 @@ class Home extends StatelessWidget {
 
     return cardGroup.isScrollable?
     Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding: EdgeInsets.symmetric(vertical: 20.h),
         child : SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
               ...List.generate(cardGroup.cards.length, (index){
                 return Padding(
-                  padding: EdgeInsets.only(left: index==0? 20 : 0,right: 20,),
-                  child: CardHC1(card: cardGroup.cards[index],width: MediaQuery.sizeOf(context).width * 0.8,),
+                  padding: EdgeInsets.only(left: index==0? 20.w : 0,right: 20.w,),
+                  child: CardHC1(card: cardGroup.cards[index],width: 0.8.sw,),
                 );
               })
             ],
@@ -227,7 +227,7 @@ class Home extends StatelessWidget {
     )
         :
     Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+      padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
       child: CardHC1(card: cardGroup.cards[0]),
     );
   }

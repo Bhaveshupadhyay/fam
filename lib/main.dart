@@ -3,6 +3,7 @@ import 'package:fampay/cubit/data_cubit/data_cubit.dart';
 import 'package:fampay/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'config/theme/app_theme.dart';
 
@@ -15,11 +16,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Fam',
-      theme: lightTheme(),
-      home: const MyHomePage(),
+    return ScreenUtilInit(
+      designSize: const Size(430, 932),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      // Use builder only if you need to use library outside ScreenUtilInit context
+      builder: (_ , child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Fam',
+          theme: lightTheme(),
+          home: child,
+        );
+      },
+      child: const MyHomePage(),
     );
   }
 }

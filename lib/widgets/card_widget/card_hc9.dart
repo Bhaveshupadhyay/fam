@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:fampay/config/convert.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../config/launch_url.dart';
 import '../../models/card.dart';
@@ -30,7 +31,7 @@ class CardHC9 extends StatelessWidget {
               begin: _getAlignmentFromAngle(card.bgGradient?.angle.toDouble()??0),  // Custom angle of 336°
               end: Alignment.bottomRight,
             ),
-            borderRadius: BorderRadius.circular(20)
+            borderRadius: BorderRadius.circular(20.r)
           ),
         ),
       ),

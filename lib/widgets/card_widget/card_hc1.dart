@@ -1,5 +1,6 @@
 import 'package:fampay/config/app_urls.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../config/convert.dart';
 import '../../config/launch_url.dart';
@@ -20,21 +21,21 @@ class CardHC1 extends StatelessWidget {
       },
       child: Container(
         width: width,
-        padding: const EdgeInsets.symmetric(vertical: 15,horizontal: 15),
+        padding: EdgeInsets.symmetric(vertical: 15.h,horizontal: 15.w),
         decoration: BoxDecoration(
           color: Convert.getColorFromHex(card.bgColor),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(12.r),
         ),
         child: Row(
           children: [
             SizedBox(
-              width: 50,
+              width: 50.w,
               child: AspectRatio(
                 aspectRatio: card.icon?.aspectRatio?.toDouble()??16/9,
                 child: Image.network(card.icon?.imageUrl?? AppUrls.errorImgUrl),
               ),
             ),
-            const SizedBox(width: 15,),
+            SizedBox(width: 15.w,),
 
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,7 +47,7 @@ class CardHC1 extends StatelessWidget {
                         style: Theme.of(context).textTheme.titleSmall?.
                         copyWith(
                             color: Convert.getColorFromHex(card.formattedTitle?.entities[0].color),
-                            fontSize: 18
+                            fontSize: 18.sp
                         ),
                         children: [
                           TextSpan(
@@ -54,7 +55,7 @@ class CardHC1 extends StatelessWidget {
                             style: Theme.of(context).textTheme.titleSmall?.
                             copyWith(
                                 color: Colors.white,
-                                fontSize: 18
+                                fontSize: 18.sp
                             ),
                           ),
                           if((card.formattedTitle?.entities.length??0)>=2)
@@ -63,7 +64,7 @@ class CardHC1 extends StatelessWidget {
                               style: Theme.of(context).textTheme.titleSmall?.
                               copyWith(
                                   color: Convert.getColorFromHex(card.formattedTitle?.entities[1].color),
-                                  fontSize: 12
+                                  fontSize: 12.sp
                               ),
                             ),
                         ]
@@ -76,7 +77,7 @@ class CardHC1 extends StatelessWidget {
                         style: Theme.of(context).textTheme.bodySmall?.
                         copyWith(
                             color: Convert.getColorFromHex(card.formattedDescription?.entities[0].color),
-                            fontSize: 18
+                            fontSize: 18.sp
                         ),
                         children: [
                           TextSpan(
@@ -84,7 +85,7 @@ class CardHC1 extends StatelessWidget {
                             style: Theme.of(context).textTheme.bodySmall?.
                             copyWith(
                                 color: Colors.white,
-                                fontSize: 18
+                                fontSize: 18.sp
                             ),
                           ),
                           if((card.formattedDescription?.entities.length??0)>=2)
@@ -93,7 +94,7 @@ class CardHC1 extends StatelessWidget {
                               style: Theme.of(context).textTheme.bodySmall?.
                               copyWith(
                                   color: Convert.getColorFromHex(card.formattedDescription?.entities[1].color),
-                                  fontSize: 12
+                                  fontSize: 12.sp
                               ),
                             ),
                         ]
