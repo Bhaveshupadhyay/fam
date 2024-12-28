@@ -10,8 +10,6 @@ NOTE: APK, screenshots, and screen recordings are attached to the repo under the
 
 https://github.com/user-attachments/assets/5d1b3aef-b1be-49f3-928c-22baf616d1c2
 
-https://github.com/user-attachments/assets/65978ae2-689d-4c98-8e34-612ce88fe1fa
-
 ## Libraries Used
 
 - Flutter Bloc
