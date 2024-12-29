@@ -2,7 +2,7 @@
 
 https://drive.google.com/drive/folders/1GWU58h54k5AfJZE0zN_WPPHmHraCdogM?usp=share_link
 
-![fam_app](https://github.com/user-attachments/assets/62c385ef-cd16-4336-ab67-688f12332c31)
+![fam_app](https://github.com/user-attachments/assets/c7d5e2b4-3fbb-487d-a82e-41696a145f20)
 
 ## flutter fampay
 
