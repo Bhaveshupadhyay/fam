@@ -155,7 +155,20 @@ class Home extends StatelessWidget {
         :
     Padding(
       padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
-      child: CardHC6(card: cardGroup.cards[0]),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          ...List.generate(cardGroup.cards.length, (index){
+            return Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(right: index<cardGroup.cards.length-1? 10.w:0,),
+                  child: CardHC6(card: cardGroup.cards[index]),
+                )
+            );
+          })
+          // CardHC1(card: cardGroup.cards[0]),
+        ],
+      ),
     );
   }
 
@@ -182,7 +195,20 @@ class Home extends StatelessWidget {
         :
     Padding(
       padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
-      child: CardHC5(card: cardGroup.cards[0]),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          ...List.generate(cardGroup.cards.length, (index){
+            return Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(right: index<cardGroup.cards.length-1? 10.w:0,),
+                  child: CardHC5(card: cardGroup.cards[index]),
+                )
+            );
+          })
+          // CardHC1(card: cardGroup.cards[0]),
+        ],
+      ),
     );
   }
 
@@ -228,7 +254,20 @@ class Home extends StatelessWidget {
         :
     Padding(
       padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
-      child: CardHC1(card: cardGroup.cards[0]),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          ...List.generate(cardGroup.cards.length, (index){
+            return Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(right: index<cardGroup.cards.length-1? 10.w:0,),
+                  child: CardHC1(card: cardGroup.cards[index]),
+                )
+            );
+          })
+          // CardHC1(card: cardGroup.cards[0]),
+        ],
+      ),
     );
   }
 }

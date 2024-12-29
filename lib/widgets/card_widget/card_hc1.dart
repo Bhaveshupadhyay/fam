@@ -37,70 +37,72 @@ class CardHC1 extends StatelessWidget {
             ),
             SizedBox(width: 15.w,),
 
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                RichText(
-                    text: TextSpan(
-                        text: '${(card.formattedTitle?.entities.length??0)>=1 ?
-                        card.formattedTitle?.entities[0].text : ''}',
-                        style: Theme.of(context).textTheme.titleSmall?.
-                        copyWith(
-                            color: Convert.getColorFromHex(card.formattedTitle?.entities[0].color),
-                            fontSize: 18.sp
-                        ),
-                        children: [
-                          TextSpan(
-                            text: '${card.formattedTitle?.text.replaceAll('{}', '')}',
-                            style: Theme.of(context).textTheme.titleSmall?.
-                            copyWith(
-                                color: Colors.white,
-                                fontSize: 18.sp
-                            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  RichText(
+                      text: TextSpan(
+                          text: '${(card.formattedTitle?.entities.length??0)>=1 ?
+                          card.formattedTitle?.entities[0].text : ''}',
+                          style: Theme.of(context).textTheme.titleSmall?.
+                          copyWith(
+                              color: Convert.getColorFromHex(card.formattedTitle?.entities[0].color),
+                              fontSize: 18.sp
                           ),
-                          if((card.formattedTitle?.entities.length??0)>=2)
+                          children: [
                             TextSpan(
-                              text: '${card.formattedTitle?.entities[1].text} ',
+                              text: '${card.formattedTitle?.text.replaceAll('{}', '')}',
                               style: Theme.of(context).textTheme.titleSmall?.
                               copyWith(
-                                  color: Convert.getColorFromHex(card.formattedTitle?.entities[1].color),
-                                  fontSize: 12.sp
+                                  color: Colors.white,
+                                  fontSize: 18.sp
                               ),
                             ),
-                        ]
-                    )
-                ),
-                RichText(
-                    text: TextSpan(
-                        text: '${(card.formattedDescription?.entities.length??0)>=1 ?
-                        card.formattedDescription?.entities[0].text : ''}',
-                        style: Theme.of(context).textTheme.bodySmall?.
-                        copyWith(
-                            color: Convert.getColorFromHex(card.formattedDescription?.entities[0].color),
-                            fontSize: 18.sp
-                        ),
-                        children: [
-                          TextSpan(
-                            text: card.formattedDescription?.text.replaceAll('{}', '')??'',
-                            style: Theme.of(context).textTheme.bodySmall?.
-                            copyWith(
-                                color: Colors.white,
-                                fontSize: 18.sp
-                            ),
+                            if((card.formattedTitle?.entities.length??0)>=2)
+                              TextSpan(
+                                text: '${card.formattedTitle?.entities[1].text} ',
+                                style: Theme.of(context).textTheme.titleSmall?.
+                                copyWith(
+                                    color: Convert.getColorFromHex(card.formattedTitle?.entities[1].color),
+                                    fontSize: 12.sp
+                                ),
+                              ),
+                          ]
+                      )
+                  ),
+                  RichText(
+                      text: TextSpan(
+                          text: '${(card.formattedDescription?.entities.length??0)>=1 ?
+                          card.formattedDescription?.entities[0].text : ''}',
+                          style: Theme.of(context).textTheme.bodySmall?.
+                          copyWith(
+                              color: Convert.getColorFromHex(card.formattedDescription?.entities[0].color),
+                              fontSize: 18.sp
                           ),
-                          if((card.formattedDescription?.entities.length??0)>=2)
+                          children: [
                             TextSpan(
-                              text: '${card.formattedDescription?.entities[1].text??''} ',
+                              text: card.formattedDescription?.text.replaceAll('{}', '')??'',
                               style: Theme.of(context).textTheme.bodySmall?.
                               copyWith(
-                                  color: Convert.getColorFromHex(card.formattedDescription?.entities[1].color),
-                                  fontSize: 12.sp
+                                  color: Colors.white,
+                                  fontSize: 18.sp
                               ),
                             ),
-                        ]
-                    )
-                ),
-              ],
+                            if((card.formattedDescription?.entities.length??0)>=2)
+                              TextSpan(
+                                text: '${card.formattedDescription?.entities[1].text??''} ',
+                                style: Theme.of(context).textTheme.bodySmall?.
+                                copyWith(
+                                    color: Convert.getColorFromHex(card.formattedDescription?.entities[1].color),
+                                    fontSize: 12.sp
+                                ),
+                              ),
+                          ]
+                      )
+                  ),
+                ],
+              ),
             )
           ],
         ),

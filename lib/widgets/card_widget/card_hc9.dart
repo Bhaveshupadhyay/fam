@@ -28,8 +28,8 @@ class CardHC9 extends StatelessWidget {
                 colors: List<Color>.from(
                     card.bgGradient?.colors.map((e)=>Convert.getColorFromHex(e))??[]
                 ),
-              begin: _getAlignmentFromAngle(card.bgGradient?.angle.toDouble()??0),  // Custom angle of 336°
-              end: Alignment.bottomRight,
+              begin: _getAlignmentFromAngle(angle: card.bgGradient?.angle.toDouble()??0,isBegin: true),  // Custom angle of 336°
+              end: _getAlignmentFromAngle(angle: card.bgGradient?.angle.toDouble()??0,isBegin: false),
             ),
             borderRadius: BorderRadius.circular(20.r)
           ),
@@ -38,10 +38,10 @@ class CardHC9 extends StatelessWidget {
     );
   }
 
-  Alignment _getAlignmentFromAngle(double angle) {
+  Alignment _getAlignmentFromAngle({required double angle, required bool isBegin}) {
     double radians = angle * pi / 180;
     double dx = cos(radians);
     double dy = sin(radians);
-    return Alignment(dx, dy);
+    return isBegin? Alignment(dx, -dy):Alignment(-dx, dy);
   }
 }

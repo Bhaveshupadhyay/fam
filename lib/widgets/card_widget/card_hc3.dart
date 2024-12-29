@@ -140,7 +140,7 @@ class CardHC3 extends StatelessWidget {
                                               ),
                                               if((card.formattedTitle?.entities.length??0)>=2)
                                                 TextSpan(
-                                                  text: '${card.formattedTitle?.entities[1].text} ',
+                                                  text: '\n${card.formattedTitle?.entities[1].text}\n',
                                                   style: Theme.of(context).textTheme.bodySmall?.
                                                   copyWith(
                                                       color: Convert.getColorFromHex(card.formattedTitle?.entities[1].color),

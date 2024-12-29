@@ -47,14 +47,15 @@ class CardHC6 extends StatelessWidget {
                 ),
               ),
             SizedBox(width: 15.w,),
-            Text(card.formattedTitle?.entities[0].text??'',
-              style: Theme.of(context).textTheme.titleSmall?.
-              copyWith(
-                  color: Colors.black,
-                  fontSize: 15.sp
+            Expanded(
+              child: Text(card.formattedTitle?.entities[0].text??'',
+                style: Theme.of(context).textTheme.titleSmall?.
+                copyWith(
+                    color: Colors.black,
+                    fontSize: 15.sp
+                ),
               ),
             ),
-            const Spacer(),
             Icon(
               Icons.arrow_forward_ios,
               color: Colors.black,
