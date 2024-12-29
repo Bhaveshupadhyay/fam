@@ -46,6 +46,7 @@ class Home extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
+                    SizedBox(height: 20.h,),
                     for(CardGroup cardGroup in famxPayPage.hcGroups)
                       if(cardGroup.designType.toUpperCase() == CardDesignType.hc3)
                         _hc3(context, cardGroup)
@@ -93,7 +94,7 @@ class Home extends StatelessWidget {
           isAppReloaded= isAppReloaded==null? true : false;
           return cardGroup.isScrollable?
           Padding(
-              padding: EdgeInsets.symmetric(vertical: 20.h),
+              padding: EdgeInsets.symmetric(vertical: 10.h),
               child : SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -137,7 +138,7 @@ class Home extends StatelessWidget {
 
     return cardGroup.isScrollable?
     Padding(
-        padding: EdgeInsets.symmetric(vertical: 20.h),
+        padding: EdgeInsets.symmetric(vertical: 10.h),
         child : SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -177,7 +178,7 @@ class Home extends StatelessWidget {
 
     return cardGroup.isScrollable?
     Padding(
-        padding: EdgeInsets.symmetric(vertical: 20.h),
+        padding: EdgeInsets.symmetric(vertical: 10.h),
         child : SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -214,7 +215,7 @@ class Home extends StatelessWidget {
 
   Widget _hc9(BuildContext context, CardGroup cardGroup){
     return Padding(
-        padding: EdgeInsets.symmetric(vertical: 20.h),
+        padding: EdgeInsets.symmetric(vertical: 10.h),
         child : SizedBox(
           height: (cardGroup.height?.toDouble()??300).h,
           child: ListView.builder(
@@ -236,7 +237,7 @@ class Home extends StatelessWidget {
 
     return cardGroup.isScrollable?
     Padding(
-        padding: EdgeInsets.symmetric(vertical: 20.h),
+        padding: EdgeInsets.symmetric(vertical: 10.h),
         child : SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
