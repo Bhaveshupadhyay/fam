@@ -207,7 +207,6 @@ class Home extends StatelessWidget {
                 )
             );
           })
-          // CardHC1(card: cardGroup.cards[0]),
         ],
       ),
     );
@@ -266,7 +265,6 @@ class Home extends StatelessWidget {
                 )
             );
           })
-          // CardHC1(card: cardGroup.cards[0]),
         ],
       ),
     );
