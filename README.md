@@ -2,13 +2,13 @@
 
 https://drive.google.com/drive/folders/1GWU58h54k5AfJZE0zN_WPPHmHraCdogM?usp=share_link
 
-![fam_app](https://github.com/user-attachments/assets/8fe73435-d98c-4af8-9788-b5578bd7df55)
+![fam_app](https://github.com/user-attachments/assets/62c385ef-cd16-4336-ab67-688f12332c31)
 
 ## flutter fampay
 
 NOTE: APK, screenshots, and screen recordings are attached to the repo under the names 'app-release.apk' and 'screenshots'
 
-https://github.com/user-attachments/assets/5d1b3aef-b1be-49f3-928c-22baf616d1c2
+https://github.com/user-attachments/assets/24cddad1-b033-42f7-b9ee-ec206377f805
 
 ## Libraries Used
 
