@@ -31,7 +31,7 @@ class CardHC1 extends StatelessWidget {
             SizedBox(
               width: 50.w,
               child: AspectRatio(
-                aspectRatio: card.icon?.aspectRatio?.toDouble()??16/9,
+                aspectRatio: card.icon?.aspectRatio?.toDouble()??10/9,
                 child: Image.network(card.icon?.imageUrl?? AppUrls.errorImgUrl),
               ),
             ),

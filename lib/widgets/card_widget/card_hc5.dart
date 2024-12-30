@@ -38,7 +38,7 @@ class CardHC5 extends StatelessWidget {
                   card.icon?.imageType == 'asset'?
                   Expanded(
                     child: AspectRatio(
-                      aspectRatio: card.icon?.aspectRatio?.toDouble()?? 16/9,
+                      aspectRatio: card.icon?.aspectRatio?.toDouble()?? 10/9,
                       child: Image.asset(
                         'assets/images/${card.icon?.imageUrl??'error.png'}',
                         height: 80.h,
@@ -49,7 +49,7 @@ class CardHC5 extends StatelessWidget {
                       :
                   Expanded(
                     child: AspectRatio(
-                      aspectRatio: card.icon?.aspectRatio?.toDouble()?? 16/9,
+                      aspectRatio: card.icon?.aspectRatio?.toDouble()?? 10/9,
                       child: Image.network(card.icon?.imageUrl??'',),
                     ),
                   ),

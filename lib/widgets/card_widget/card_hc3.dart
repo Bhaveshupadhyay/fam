@@ -27,7 +27,7 @@ class CardHC3 extends StatelessWidget {
             child: SizedBox(
               width: width,
               child: AspectRatio(
-                aspectRatio: card.bgImage?.aspectRatio?.toDouble()?? 16/9,
+                aspectRatio: card.bgImage?.aspectRatio?.toDouble()?? 8/9,
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
