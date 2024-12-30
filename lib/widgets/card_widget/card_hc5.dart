@@ -59,35 +59,37 @@ class CardHC5 extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 5.h,),
-                    RichText(
-                        text: TextSpan(
-                            text: '${(card.formattedTitle?.entities.length??0)>=1 ?
-                            card.formattedTitle?.entities[0].text : ''}',
-                            style: Theme.of(context).textTheme.titleSmall?.
-                            copyWith(
-                                color: Convert.getColorFromHex(card.formattedTitle?.entities[0].color),
-                                fontSize: 35.sp
-                            ),
-                            children: [
-                              TextSpan(
-                                text: '${card.formattedTitle?.text.replaceAll('{}', '')}',
-                                style: Theme.of(context).textTheme.titleSmall?.
-                                copyWith(
-                                    color: Colors.white,
-                                    fontSize: 35.sp
-                                ),
+                    Expanded(
+                      child: RichText(
+                          text: TextSpan(
+                              text: '${(card.formattedTitle?.entities.length??0)>=1 ?
+                              card.formattedTitle?.entities[0].text : ''}',
+                              style: Theme.of(context).textTheme.titleSmall?.
+                              copyWith(
+                                  color: Convert.getColorFromHex(card.formattedTitle?.entities[0].color),
+                                  fontSize: 35.sp
                               ),
-                              if((card.formattedTitle?.entities.length??0)>=2)
+                              children: [
                                 TextSpan(
-                                text: '${card.formattedTitle?.entities[1].text} ',
-                                style: Theme.of(context).textTheme.bodySmall?.
-                                copyWith(
-                                    color: Convert.getColorFromHex(card.formattedTitle?.entities[1].color),
-                                    fontSize: 15.sp
+                                  text: '${card.formattedTitle?.text.replaceAll('{}', '')}',
+                                  style: Theme.of(context).textTheme.titleSmall?.
+                                  copyWith(
+                                      color: Colors.white,
+                                      fontSize: 35.sp
+                                  ),
                                 ),
-                              ),
-                            ]
-                        )
+                                if((card.formattedTitle?.entities.length??0)>=2)
+                                  TextSpan(
+                                  text: '${card.formattedTitle?.entities[1].text} ',
+                                  style: Theme.of(context).textTheme.bodySmall?.
+                                  copyWith(
+                                      color: Convert.getColorFromHex(card.formattedTitle?.entities[1].color),
+                                      fontSize: 15.sp
+                                  ),
+                                ),
+                              ]
+                          )
+                      ),
                     ),
                     SizedBox(height: 5.h,),
                   ],

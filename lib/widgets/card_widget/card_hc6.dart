@@ -54,6 +54,7 @@ class CardHC6 extends StatelessWidget {
                     color: Colors.black,
                     fontSize: 15.sp
                 ),
+                maxLines: 1,
               ),
             ),
             Icon(
