@@ -85,13 +85,11 @@ class Home extends StatelessWidget {
 
 
   Widget _hc3(BuildContext context, CardGroup cardGroup){
-    bool? isAppReloaded;
     if(cardGroup.cards.isEmpty) return Container();
 
     return BlocBuilder<SaveCardCubit,CardsState>(
       builder: (BuildContext context, CardsState state) {
         if(state is CardsLoaded<Map<String,dynamic>>){
-          isAppReloaded= isAppReloaded==null? true : false;
           return cardGroup.isScrollable?
           Padding(
               padding: EdgeInsets.symmetric(vertical: 10.h),
@@ -104,7 +102,7 @@ class Home extends StatelessWidget {
                         var data=state.data[cardGroup.cards[index].id.toString()];
 
                         if(data['isDismiss']
-                            || (data['isRemind'] && isAppReloaded==false ) ) {
+                            || (data['isRemind'] && state.isAppReloaded==false) ) {
                           return Container();
                         }
                       }
@@ -122,8 +120,8 @@ class Home extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
             child: state.data.containsKey(cardGroup.cards[0].id.toString()) &&
                 (state.data[cardGroup.cards[0].id.toString()]['isDismiss'] ||
-                (state.data[cardGroup.cards[0].id.toString()]['isRemind'] && isAppReloaded==false))?
-                // checking if the card is dismissed or the card is in remind and if the app is not reloaded
+                (state.data[cardGroup.cards[0].id.toString()]['isRemind'] && state.isAppReloaded==false))?
+                // checking if the card is dismissed, or if the card is in the reminder state, and if the app has not been reloaded
              Container(): CardHC3(card: cardGroup.cards[0]),
           );
         }
