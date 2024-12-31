@@ -121,7 +121,8 @@ class Home extends StatelessWidget {
             child: state.data.containsKey(cardGroup.cards[0].id.toString()) &&
                 (state.data[cardGroup.cards[0].id.toString()]['isDismiss'] ||
                 (state.data[cardGroup.cards[0].id.toString()]['isRemind'] && state.isAppReloaded==false))?
-                // checking if the card is dismissed, or if the card is in the reminder state, and if the app has not been reloaded
+                /* Check if the data contains the key (card id),
+                 and then check if the card is dismissed or if it is set to remind and the app has not been reloaded.*/
              Container(): CardHC3(card: cardGroup.cards[0]),
           );
         }
