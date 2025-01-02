@@ -73,7 +73,8 @@ class CardHC1 extends StatelessWidget {
                         ),
                       maxLines: 1,
                     ),
-                    RichText(
+                    if(card.formattedDescription?.entities.isNotEmpty??false)
+                      RichText(
                         text: TextSpan(
                             text: '${(card.formattedDescription?.entities.length??0)>=1 ?
                             card.formattedDescription?.entities[0].text : ''}',
