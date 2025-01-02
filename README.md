@@ -17,6 +17,7 @@ https://github.com/user-attachments/assets/24cddad1-b033-42f7-b9ee-ec206377f805
 - dio
 - Url launcher
 - Shared Prefrences
+- Screen utils
 
 ## Flutter Bloc
 
